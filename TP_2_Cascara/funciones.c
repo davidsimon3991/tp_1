@@ -23,7 +23,6 @@ int buscarExistente(EPersona p[],int tp,int auxDNI)
     {
         if(p[i].estado ==1 && auxDNI == p[i].dni)
         {
-            //printf("Ya existe ese DNI");
             flag=1;
             break;
         }
@@ -35,16 +34,15 @@ int buscarExistente(EPersona p[],int tp,int auxDNI)
     return encuentro;
 }
 
+
 void alta(EPersona persona[],int tam)
 {
-    int i;
     int flag=0;
-    char nombre[50];
     char n[60];
     int existente;
     int idPer;
 
-    for(i=0; i<tam; i++)
+    for(int i=0; i<tam; i++)
     {
         if(persona[i].estado==0)
         {
@@ -58,6 +56,7 @@ void alta(EPersona persona[],int tam)
             if(existente == -1)
             {
                 printf("\nYa existe una persona con ese DNI\n");
+
                 system("pause");
             }
             else
@@ -80,12 +79,16 @@ void alta(EPersona persona[],int tam)
 
                 printf("ingrese edad: ");
                 scanf("%d",&persona[i].edad);
+                while(persona[i].edad < 0 || persona[i].edad > 102)
+                {
+                    printf("edad no valida. Ingrese entre 1 a 102:");
+                    scanf("%d", & persona[i].edad);
+                }
+                persona[i].estado=1;
+
             }
 
 
-
-
-            persona[i].estado=1;
             flag=1;
             break;
         }
@@ -97,9 +100,6 @@ void alta(EPersona persona[],int tam)
     }
     return;
 }
-
-
-
 
 void baja(EPersona persona[],int tam)
 {
@@ -141,8 +141,8 @@ void baja(EPersona persona[],int tam)
 void ordenarXnombre(EPersona per[],int tam)
 {
     char aux[20];
-    int auxEdad[20];
-    int auxDNI[20];
+    int auxEdad;
+    int auxDNI;
     for(int i=0; i<tam-1; i++)
     {
         for(int j = i+1; j<tam; j++)
@@ -156,24 +156,24 @@ void ordenarXnombre(EPersona per[],int tam)
                     strcpy(per[i].nombre,per[j].nombre);
                     strcpy(per[j].nombre,aux);
 
-                    strcpy(auxEdad,per[i].edad);
-                    strcpy(per[i].edad,per[j].edad);
-                    strcpy(per[j].edad,auxEdad);
+                    auxEdad = per[i].edad;
+                    per[i].edad = per[j].edad;
+                    per[j].edad= auxEdad;
 
-                    strcpy(auxDNI,per[i].dni);
-                    strcpy(per[i].dni,per[j].dni);
-                    strcpy(per[j].dni,auxDNI);
+                    auxDNI = per[i].dni;
+                    per[i].dni=per[j].dni;
+                    per[j].dni=auxDNI;
                 }
             }
         }
 
     }
-    printf("\n\t[LISTA ORDENADA POR NOMBRES]\n");
+    printf("\n\t\t[LISTA ORDENADA POR NOMBRES]\n");
     for(int i =0; i<tam; i++)
     {
         if(per[i].estado==1)
         {
-            printf("\tNombre: %s \t\tEdad: %d\t\tDNI: %d\n", per[i].nombre, per[i].edad, per[i].dni);
+            printf("\tNombre: %s \t\tEdad: %d\tDNI: %d\n", per[i].nombre, per[i].edad, per[i].dni);
         }
     }
 
@@ -187,6 +187,7 @@ void imprimir(EPersona pers[],int tam)
     int max;
     int flag=0;
 
+    printf("[EDADES ORGANIZADAS POR CRITERIO]\n");
     for(int i=0; i<tam; i++)
     {
         if(pers[i].estado==1)
@@ -221,33 +222,32 @@ void imprimir(EPersona pers[],int tam)
     {
         if(i<= a)
         {
-            printf("*");
+            printf("\t*");
         }
         if(i<= b)
         {
             flag=1;
-            printf("\t*");
+            printf("\t\t*");
         }
-        if(i<= c)
-        {
-            if(flag==0)
+
+            if(i<= c)
             {
-                printf("\t\t*");
+                if(flag==0)
+                {
+                    printf("\t\t\t*");
+                }
+                if(flag==1)
+                {
+                    printf("\t\t*");
+                }
             }
-            if(flag==1)
-            {
-                printf("\t*");
-            }
-        }
+
+
         printf("\n");
 
     }
 
-    printf("Menores a 18\tEntre19 y 35\tMayores a 35>");
-
-
-
-
+    printf("\t<18\t19-35\t>35\n");
 
 
 }

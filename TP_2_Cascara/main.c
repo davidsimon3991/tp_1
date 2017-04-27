@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "funciones.h"
 
-#define TAM 3
+#define TAM 20
 
 //me falta validar y arreglar los errorres
 
