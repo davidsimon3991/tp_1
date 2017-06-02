@@ -22,7 +22,7 @@ int buscarIndice(ePelicula pelicula[])
 
 void alta(ePelicula pelicula[])
 {
-    int index, i;
+    int index;
     int id;
     int encontro=0;
     index=buscarIndice(pelicula);
@@ -30,7 +30,7 @@ void alta(ePelicula pelicula[])
     {
         printf("Ingrese id: ");
         scanf("%d", &id);
-        for(i=0; i<100; i++)
+        for(int i=0; i<100; i++)
         {
             if(id==pelicula[i].id)
             {
@@ -103,7 +103,7 @@ void baja(ePelicula* pelicula)
 void modificar(ePelicula* pelicula)
 {
     int id;
-    int index, duracion;
+    int duracion;
     int flag=0,i;
     char opcion;
     char titulo[20],genero[20];
@@ -154,12 +154,11 @@ void modificar(ePelicula* pelicula)
 
 void listar(ePelicula *pelicula)
 {
-    int i,j;
     ePelicula auxP;
 
-    for(i=0; i<100-1; i++)
+    for(int i=0; i<100-1; i++)
     {
-        for(j=i+1; j<100; j++)
+        for(int j=i+1; j<100; j++)
         {
             if(strcmp(pelicula[i].titulo,pelicula[j].titulo)>0)
             {
@@ -171,7 +170,7 @@ void listar(ePelicula *pelicula)
     }
 
     printf("ID\tTitulo\t\tGenero\t\tDuracion\n");
-    for(i=0; i<100; i++)
+    for(int i=0; i<100; i++)
     {
         if(pelicula[i].estado==1)
             mensaje((pelicula + i));
