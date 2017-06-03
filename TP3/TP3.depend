@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1496448310 source:d:\mis documentos\utn\laboratorio i\tp3\tp3\funciones.c
+1496449799 source:d:\mis documentos\utn\laboratorio i\tp3\tp3\funciones.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -8,10 +8,10 @@
 	<string.h>
 	"funciones.h"
 
-1496443763 source:d:\mis documentos\utn\laboratorio i\tp3\tp3\main.c
+1496449663 source:d:\mis documentos\utn\laboratorio i\tp3\tp3\main.c
 	<stdio.h>
 	<stdlib.h>
 	"funciones.h"
 
-1496443468 d:\mis documentos\utn\laboratorio i\tp3\tp3\funciones.h
+1496449640 d:\mis documentos\utn\laboratorio i\tp3\tp3\funciones.h
 

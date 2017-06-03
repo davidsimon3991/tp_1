@@ -7,6 +7,18 @@
 #include "funciones.h"
 //todos los desarrollos de funciones
 
+void iniciarEstados(ePelicula*pelicula,int tam)
+{
+     for(int i=0; i<tam; i++)
+    {
+        if(pelicula[i].estado==0)
+        {
+            pelicula[i].id=-1;
+        }
+
+
+    }
+}
 int buscarIndice(ePelicula pelicula[],int tam)
 {
     int index=-1;
@@ -41,6 +53,7 @@ void alta(ePelicula pelicula[],int tam)
         }
         if(!encontro)
         {
+            pelicula[index].id=id;
             printf("\ningrese titulo: ");
             fflush(stdin);
             gets(titulo);
@@ -113,7 +126,7 @@ void baja(ePelicula* pelicula,int tam)
             opcion=getche();
             if(opcion=='s')
             {
-                pelicula[i].estado=-1;
+                pelicula[i].estado=0;
                 pelicula[i].id=-1;
                 printf("Eliminada\n");
             }
