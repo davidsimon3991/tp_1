@@ -1,5 +1,3 @@
 Peliculas
 ID  Titulo  Genero  Duracion 
-201	bonanza	drama	999
-200	gladiador	accion	320
-321	madraza	drama	120
+200	lalasd	lalalan	230

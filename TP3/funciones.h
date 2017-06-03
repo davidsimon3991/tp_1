@@ -18,7 +18,7 @@ typedef struct
     char linkImagen[50];
 } ePelicula;
 
-int buscarIndice(ePelicula*);
+int buscarIndice(ePelicula*,int);
 /** \brief busca si hay espacio en el indice
  *
  * \param index devuelve el valor que tomara la estructura para guardarse
@@ -27,7 +27,7 @@ int buscarIndice(ePelicula*);
  */
 
 
-void alta(ePelicula*);
+void alta(ePelicula*,int);
 /** \brief dar de alta a una nueva pelicula para registrar
  *
  * \param index obtiene el valor de buscarIndice
@@ -36,7 +36,7 @@ void alta(ePelicula*);
  * \return
  *
  */
-void baja(ePelicula*);
+void baja(ePelicula*,int);
 /** \brief dar de baja una pelicula en base a ID
  *
  * \param id recibe el valor que se da para la baja
@@ -45,7 +45,7 @@ void baja(ePelicula*);
  *
  */
 
-void modificar(ePelicula*);
+void modificar(ePelicula*,int);
 /** \brief modificar una pelicula en base a ID
  *
  * \param id recibe el valor que se da para la modificacion
@@ -57,7 +57,7 @@ void modificar(ePelicula*);
  * \return
  *
  */
-void listar(ePelicula*);
+void listar(ePelicula*,int);
 /** \brief muestra una lista ordenada en memoria de todas las peliculas guardadas
  *
  * \param auxP se utiliza como auxiliar para el metodo de burbujeo
@@ -71,21 +71,21 @@ void mensaje(ePelicula*);
  * \return
  *
  */
-int guardar(ePelicula *);
+int guardar(ePelicula *,int);
 /** \brief guarda todos los registros realizados en memoria en un archivo binario
  *
  * \param f recorre la lista de peliculas
  * \return
  *
  */
-int cargar(ePelicula *);
+int cargar(ePelicula *,int);
 /** \brief carga un archivo binario que contiene las peliculas
  *
  * \param f recorre la lista de peliculas
  * \return
  *
  */
-void crearHtml(ePelicula *);
+void crearHtml(ePelicula *,int);
 /** \brief da formato html a un archivo que contiene las peliculas del archivo binario
  *
  * \param f recorre la lista de peliculas

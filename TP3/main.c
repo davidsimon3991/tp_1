@@ -14,7 +14,7 @@ int main()
     char seguir ='s';
     char guardado;
 
-    if(cargar(peliculas))
+    if(cargar(peliculas,TAM))
     {
         printf("No se pudo abrir el fichero");
     }
@@ -32,34 +32,34 @@ int main()
         switch(opcion)
         {
         case 1:
-            alta(peliculas);
+            alta(peliculas,TAM);
             break;
         case 2:
-            baja(peliculas);
+            baja(peliculas,TAM);
             break;
         case 3:
-            modificar(peliculas);
+            modificar(peliculas,TAM);
             break;
         case 4:
-            crearHtml(peliculas);
+            crearHtml(peliculas,TAM);
             break;
         case 5:
             printf("\nguardar? S/N:");
             guardado=tolower(getche());
             if(guardado == 's')
             {
-                if(guardar(peliculas))
+                if(guardar(peliculas,TAM))
                 {
-                    printf("\nNo se pudo abrir el fichero\n");
+                    printf("\nNo se pudo guardar\n");
                 }
                 else
                 {
-                    printf("\nSe guardo la informacion con exito\n");
+                    printf("\nGuardado\n");
                 }
             }
             break;
         case 6:
-            listar(peliculas);
+            listar(peliculas,TAM);
             break;
         case 7:
             seguir='n';

@@ -7,11 +7,11 @@
 #include "funciones.h"
 //todos los desarrollos de funciones
 
-int buscarIndice(ePelicula pelicula[])
+int buscarIndice(ePelicula pelicula[],int tam)
 {
     int index=-1;
     int i;
-    for( i=0; i < 100; i++)
+    for( i=0; i < tam; i++)
         if(pelicula[i].estado==0)
         {
             index=i;
@@ -20,17 +20,18 @@ int buscarIndice(ePelicula pelicula[])
     return index;
 }
 
-void alta(ePelicula pelicula[])
+void alta(ePelicula pelicula[],int tam)
 {
     int index;
     int id;
+    char titulo[20],descripcion[1000];
     int encontro=0;
-    index=buscarIndice(pelicula);
+    index=buscarIndice(pelicula,tam);
     if(index!=-1)
     {
         printf("Ingrese id: ");
         scanf("%d", &id);
-        for(int i=0; i<100; i++)
+        for(int i=0; i<tam; i++)
         {
             if(id==pelicula[i].id)
             {
@@ -40,16 +41,45 @@ void alta(ePelicula pelicula[])
         }
         if(!encontro)
         {
-            pelicula[index].id=id;
-            printf("Ingrese titulo: ");
+            printf("\ningrese titulo: ");
             fflush(stdin);
-            gets(pelicula[index].titulo);
+            gets(titulo);
+            strlwr(titulo);
+
+            titulo[0] = toupper(titulo[0]);
+
+            for(int i=0; i<strlen(titulo); i++)
+            {
+                if(titulo[i] ==' ')
+                {
+                    titulo[i+1] = toupper(titulo[i+1]);
+                }
+            }
+            strcpy(pelicula[index].titulo,titulo);
+
             printf("Ingrese genero: ");
             fflush(stdin);
             gets(pelicula[index].genero);
+            strupr(pelicula[index].genero);
+
             printf("Ingrese duracion(MIN): ");
             scanf("%d", &pelicula[index].duracion);
             pelicula[index].estado=1;
+
+            printf("Ingrese descripcion:");
+            fflush(stdin);
+            gets(descripcion);
+            strlwr(descripcion);
+            descripcion[0] = toupper(descripcion[0]);
+
+            for(int i=0; i<strlen(descripcion); i++)
+            {
+                if(descripcion[i] =='.')
+                {
+                    descripcion[i+1] = toupper(descripcion[i+1]);
+                }
+            }
+            strcpy(pelicula[index].descripcion,descripcion);
             system("cls");
         }
         else
@@ -65,13 +95,13 @@ void alta(ePelicula pelicula[])
     }
 }
 
-void baja(ePelicula* pelicula)
+void baja(ePelicula* pelicula,int tam)
 {
     int id, flag=0,i;
     char opcion;
     printf("Ingrese ID a dar de baja: ");
     scanf("%d", &id);
-    for(i=0; i<100; i++)
+    for(i=0; i<tam; i++)
     {
         if(id==pelicula[i].id)
         {
@@ -83,7 +113,8 @@ void baja(ePelicula* pelicula)
             opcion=getche();
             if(opcion=='s')
             {
-                pelicula[i].estado=0;
+                pelicula[i].estado=-1;
+                pelicula[i].id=-1;
                 printf("Eliminada\n");
             }
             else
@@ -100,7 +131,7 @@ void baja(ePelicula* pelicula)
         getch();
     }
 }
-void modificar(ePelicula* pelicula)
+void modificar(ePelicula* pelicula,int tam)
 {
     int id;
     int duracion;
@@ -110,7 +141,7 @@ void modificar(ePelicula* pelicula)
     system("cls");
     printf("Ingrese ID a modificar: ");
     scanf("%d",& id);
-    for( i=0; i<100; i++)
+    for( i=0; i<tam; i++)
     {
         if(id==pelicula[i].id)
         {
@@ -128,6 +159,7 @@ void modificar(ePelicula* pelicula)
             scanf("%d", &duracion);
 
             printf("Modificar?(s/n) ");
+            fflush(stdin);
             opcion=getche();
             if(opcion=='s')
             {
@@ -152,11 +184,11 @@ void modificar(ePelicula* pelicula)
     }
 }
 
-void listar(ePelicula *pelicula)
+void listar(ePelicula *pelicula,int tam)
 {
     ePelicula auxP;
 
-    for(int i=0; i<100-1; i++)
+    for(int i=0; i<tam-1; i++)
     {
         for(int j=i+1; j<100; j++)
         {
@@ -169,8 +201,8 @@ void listar(ePelicula *pelicula)
         }
     }
 
-    printf("ID\tTitulo\t\tGenero\t\tDuracion\n");
-    for(int i=0; i<100; i++)
+    printf("Datos de peliculas\n\n");
+    for(int i=0; i<tam; i++)
     {
         if(pelicula[i].estado==1)
             mensaje((pelicula + i));
@@ -180,28 +212,26 @@ void listar(ePelicula *pelicula)
 }
 void mensaje(ePelicula* pelicula)
 {
-    printf("%d\t%s\t\t%s\t\t%d\n", pelicula->id, pelicula->titulo, pelicula->genero,pelicula->duracion);
+    printf("ID:%d\nTitulo:%s\nGenero:%s\nDuracion(min):%d\nDescripcion:%s\n\n", pelicula->id, pelicula->titulo, pelicula->genero,pelicula->duracion,pelicula->descripcion);
 }
 
-int guardar(ePelicula * x)
+int guardar(ePelicula * x,int tam)
 {
-
     FILE *f;
-
     f=fopen("bin.dat","wb");
     if(f == NULL)
     {
         return 1;
     }
 
-    fwrite(x,sizeof(ePelicula),1000,f);
+    fwrite(x,sizeof(ePelicula),tam,f);
 
     fclose(f);
 
     return 0;
 }
 
-int cargar(ePelicula *x)
+int cargar(ePelicula *x,int tam)
 {
     int flag = 0;
     FILE *f;
@@ -221,13 +251,13 @@ int cargar(ePelicula *x)
 
     if(flag ==0)
     {
-        fread(x,sizeof(ePelicula),1000,f);
+        fread(x,sizeof(ePelicula),tam,f);
     }
     fclose(f);
     return 0;
 
 }
-void crearHtml(ePelicula *x)
+void crearHtml(ePelicula *x,int tam)
 {
     FILE *f;
     f=fopen("peliculas.txt", "w");
@@ -241,7 +271,7 @@ void crearHtml(ePelicula *x)
         fprintf(f,"Peliculas\n");
         fprintf(f,"ID  Titulo  Genero  Duracion \n");
 
-        for(int i=0; i<A; i++)
+        for(int i=0; i<tam; i++)
         {
             if(x[i].estado == 1)
             {
