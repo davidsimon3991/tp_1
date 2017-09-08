@@ -1,15 +1,8 @@
 #ifndef FUNCIONES_H_INCLUDED
 #define FUNCIONES_H_INCLUDED
 
-float numero_A();
-/** \brief numero_A obtiene un numero ingresado por el usuario
- *
- * \param num guarda el numero ingresado
- * \return num devuelve el valor ingresado
- *
- */
-float numero_B();
-/** \brief numero_B obtiene un numero ingresado por el usuario
+float ingresarNumero();
+/** \brief Obtiene un numero ingresado por el usuario
  *
  * \param num guarda el numero ingresado
  * \return num devuelve el valor ingresado

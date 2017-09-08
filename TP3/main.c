@@ -21,6 +21,7 @@ int main()
     else
     {
         printf("Se cargaron las peliculas con exito\n");
+        iniciarEstados(peliculas,TAM);
     }
 
     system("pause");

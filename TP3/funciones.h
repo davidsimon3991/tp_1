@@ -18,6 +18,7 @@ typedef struct
     char linkImagen[50];
 } ePelicula;
 
+void iniciarEstados(ePelicula*,int);
 int buscarIndice(ePelicula*,int);
 /** \brief busca si hay espacio en el indice
  *

@@ -1,16 +1,9 @@
 #include <stdio.h>
 
-float numero_A()
+float ingresarNumero()
 {
     float num;
     printf("ingrese numero: ");
-    scanf("%f",&num);
-    return num;
-}
-float numero_B()
-{
-    float num;
-    printf("ingrese numero:");
     scanf("%f",&num);
     return num;
 }
@@ -49,7 +42,7 @@ void multiplicar(float x, float y)
 }
 void factoreo(int x)
 {
-    int fact = 1;
+    unsigned long long fact = 1;
     for (int i = x; i > 1; i--)
     {
         fact = fact * i;

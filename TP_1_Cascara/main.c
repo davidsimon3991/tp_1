@@ -45,11 +45,11 @@ int main()
         switch(opcion)
         {
         case 1:
-            numA = numero_A();
+            numA = ingresarNumero();
             flag_A = 1;
             break;
         case 2:
-            numB = numero_B();
+            numB = ingresarNumero();
             flag_B =1;
             break;
         case 3:
