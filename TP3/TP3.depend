@@ -15,3 +15,19 @@
 
 1496449640 d:\mis documentos\utn\laboratorio i\tp3\tp3\funciones.h
 
+1496449663 source:d:\mis documentos\github\tp_laboratorio_1\tp3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1496449640 d:\mis documentos\github\tp_laboratorio_1\tp3\funciones.h
+
+1508797755 source:d:\mis documentos\github\tp_laboratorio_1\tp3\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+	<string.h>
+	"funciones.h"
+

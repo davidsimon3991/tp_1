@@ -5,7 +5,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "funciones.h"
-//todos los desarrollos de funciones
+
 
 void iniciarEstados(ePelicula*pelicula,int tam)
 {
@@ -273,7 +273,7 @@ int cargar(ePelicula *x,int tam)
 void crearHtml(ePelicula *x,int tam)
 {
     FILE *f;
-    f=fopen("peliculas.txt", "w");
+    f=fopen("peliculas.txt", "w+");
 
     if(f == NULL)
     {
