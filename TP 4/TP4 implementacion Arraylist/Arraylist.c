@@ -255,6 +255,7 @@ int al_clear(ArrayList* this)
 ArrayList* al_clone(ArrayList* this)
 {
     ArrayList* returnAux = NULL;
+<<<<<<< HEAD
     void* aux=NULL;
 
     if(this != NULL)
@@ -272,6 +273,8 @@ ArrayList* al_clone(ArrayList* this)
             }
         }
     }
+=======
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
 
     return returnAux;
 }
@@ -399,6 +402,7 @@ void* al_pop(ArrayList* this,int index)
  */
 ArrayList* al_subList(ArrayList* this,int from,int to)
 {
+<<<<<<< HEAD
     ArrayList* returnAux = NULL;
     void* aux=NULL;
 
@@ -417,6 +421,9 @@ ArrayList* al_subList(ArrayList* this,int from,int to)
             }
         }
     }
+=======
+    void* returnAux = NULL;
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
 
     return returnAux ;
 }
@@ -431,6 +438,7 @@ ArrayList* al_subList(ArrayList* this,int from,int to)
  * \return int Return (-1) if Error [pList or pList2 are NULL pointer]
  *                  - (0) if Not contains All - (1) if is contains All
  */
+<<<<<<< HEAD
 int al_containsAll(ArrayList* pList,ArrayList* pList2)
 {
     int returnAux = -1;
@@ -457,6 +465,12 @@ int al_containsAll(ArrayList* pList,ArrayList* pList2)
             returnAux=0;
         }
     }
+=======
+int al_containsAll(ArrayList* this,ArrayList* this2)
+{
+    int returnAux = -1;
+
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
     return returnAux;
 }
 
@@ -467,7 +481,10 @@ int al_containsAll(ArrayList* pList,ArrayList* pList2)
  * \return int Return (-1) if Error [pList or pFunc are NULL pointer]
  *                  - (0) if ok
  */
+<<<<<<< HEAD
 
+=======
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
 int al_sort(ArrayList* this, int (*pFunc)(void*,void*), int order)
 {
     int returnAux = -1;

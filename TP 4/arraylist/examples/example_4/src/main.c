@@ -37,13 +37,22 @@ int main(void)
         startTesting(7);
         startTesting(8);
         startTesting(9);
+<<<<<<< HEAD
         startTesting(10);   //clonar
+=======
+        //startTesting(10);   //clonar
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
         startTesting(11);
         startTesting(12);
         startTesting(13);
         startTesting(14);
+<<<<<<< HEAD
         startTesting(15);
         startTesting(16);
+=======
+        //startTesting(15);
+        //startTesting(16);
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
         startTesting(17);
 
     return 0;

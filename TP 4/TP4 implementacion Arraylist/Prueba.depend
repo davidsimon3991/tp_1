@@ -28,6 +28,7 @@
 	"ArrayList.h"
 	"Employee.h"
 
+<<<<<<< HEAD
 1509199427 source:d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\parser.c
 	<stdio.h>
 	<stdlib.h>
@@ -45,13 +46,36 @@
 	"ArrayList.h"
 
 1510267007 source:d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\employee.c
+=======
+1510265667 source:d:\mis documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1510057469 d:\mis documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\arraylist.h
+
+1509199427 source:d:\mis documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1510273440 d:\mis documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\employee.h
+
+1510273622 source:d:\mis documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\employee.c
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"ArrayList.h"
 	"Employee.h"
 
+<<<<<<< HEAD
 1510267007 source:d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\main.c
+=======
+1510273732 source:d:\mis documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\main.c
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
 	<stdio.h>
 	<stdlib.h>
 	"ArrayList.h"

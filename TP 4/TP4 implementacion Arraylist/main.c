@@ -25,7 +25,11 @@ int main()
     Employee * e1;
 
     char nombre[50], apellido[50];
+<<<<<<< HEAD
     int isEmpty_int;
+=======
+    int isEmpty_int, inicio,fin;
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
 
 
     int opcion;
@@ -52,6 +56,10 @@ int main()
             }
             break;
         case 2:
+<<<<<<< HEAD
+=======
+            printf("\nID    isEmpty\tFull name\n");
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
             employee_printEmployees(lista);
             break;
         case 3:
@@ -63,6 +71,17 @@ int main()
         case 5:
             employee_delete(lista);
             break;
+<<<<<<< HEAD
+=======
+        case 6:
+            printf("ingrese valor inicial: ");
+            scanf("%d",&inicio);
+            printf("ingrese valor inicial: ");
+            scanf("%d",&fin);
+            printf("\nID    isEmpty\tFull name\n");
+            printFromWhere(lista,inicio,fin);
+            break;
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
         case 0:
             seguir='n';
             break;

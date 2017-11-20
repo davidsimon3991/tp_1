@@ -31,6 +31,10 @@ struct
 int employee_compare(void*,void*);
 void employee_print(Employee* this);
 void employee_printEmployees(ArrayList*);
+<<<<<<< HEAD
+=======
+void printFromWhere(ArrayList*,int,int);
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
 Employee* employee_new(void);
 Employee* employee_new_withData(int,char*,char*,int);
 Employee* employee_alta(ArrayList*);

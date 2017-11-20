@@ -28,7 +28,11 @@ void employee_print(Employee* this)
 void employee_printEmployees(ArrayList* listaEmpleados)
 {
     int cont=0;
+<<<<<<< HEAD
     printf("\nID    isEmpty\tFull name\n");
+=======
+
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
     for(int i =0; i<listaEmpleados->size; i++)
     {
         if(cont % 250==0)
@@ -40,7 +44,25 @@ void employee_printEmployees(ArrayList* listaEmpleados)
         cont++;
     }
 }
+<<<<<<< HEAD
 
+=======
+void printFromWhere(ArrayList* listaEmpleados,int inicio,int fin)
+{
+    int cont=0;
+    printf("\nID    isEmpty\tFull name\n");
+    for(int i = inicio; i<fin; i++)
+    {
+        if(cont % 250==0)
+        {
+            system("pause");
+            printf("\nID    isEmpty\tFull name\n");
+        }
+        employee_print(listaEmpleados->pElements[i]);
+        cont++;
+    }
+}
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
 
 Employee* employee_new(void)
 {

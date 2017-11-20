@@ -2242,6 +2242,7 @@
 
 1463521274 d:\usuarios\documentos\github\utn\laboratorio i - programacion i\tp4\arraylist\examples\example_4\testing\inc\main_test.h
 
+<<<<<<< HEAD
 1463521274 source:d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\arraylist\utest.c
 	"utest.h"
 	<stdio.h>
@@ -2467,3 +2468,5 @@
 
 1463521274 d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\arraylist\examples\example_4\testing\inc\main_test.h
 
+=======
+>>>>>>> 16519056a874d9ff6db07831aa32c9324d00035b
