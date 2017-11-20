@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1510265667 source:d:\usuarios\documentos\github\utn\laboratorio i - programacion i\tp4\programa con arraylist\tp4 implementacion arraylist\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1510266832 source:d:\usuarios\documentos\github\utn\laboratorio i - programacion i\tp4\programa con arraylist\tp4 implementacion arraylist\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1510057469 d:\usuarios\documentos\github\utn\laboratorio i - programacion i\tp4\programa con arraylist\tp4 implementacion arraylist\arraylist.h
+
+1510266824 d:\usuarios\documentos\github\utn\laboratorio i - programacion i\tp4\programa con arraylist\tp4 implementacion arraylist\employee.h
+
+1510265185 source:d:\usuarios\documentos\github\utn\laboratorio i - programacion i\tp4\programa con arraylist\tp4 implementacion arraylist\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1509199427 source:d:\usuarios\documentos\github\utn\laboratorio i - programacion i\tp4\programa con arraylist\tp4 implementacion arraylist\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1509199427 source:d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1510266824 d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\employee.h
+
+1510057469 d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\arraylist.h
+
+1511195326 source:d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\arraylist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+
+1510267007 source:d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\employee.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"ArrayList.h"
+	"Employee.h"
+
+1510267007 source:d:\usuarios\documentos\github\tp_laboratorio_1\tp 4\tp4 implementacion arraylist\main.c
+	<stdio.h>
+	<stdlib.h>
+	"ArrayList.h"
+	"Employee.h"
+
